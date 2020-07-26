@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useQuery } from "react-query";
+import "./App.css";
+import Column from "./components/Column";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="container">
+      <h1>Pokedex</h1>
+      <Pokedex />
     </div>
+  );
+}
+
+const fetchPokemon = async () => {
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon");
+  const data = await response.json();
+  return data;
+};
+
+function Pokedex() {
+  const { data, status } = useQuery("fetchPokemon", fetchPokemon);
+
+  if (status === "loading") return <div></div>;
+
+  return (
+    <React.Fragment>
+      <Column results={data.results} next={data.next} />
+    </React.Fragment>
   );
 }
 

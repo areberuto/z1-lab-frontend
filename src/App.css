@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+#container {
+  position: relative;
+  height: 812px;
+  background: #ffffff;
+  background-image: url("/pokeball.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position-x: 400px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#container h1 {
+  position: absolute;
+  width: 316px;
+  height: 25px;
+  left: 26px;
+  top: 52px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #303943;
 }

@@ -1,0 +1,23 @@
+#cardsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  position: absolute;
+  width: 328px;
+  height: 664px;
+  left: 24px;
+  top: 119px;
+}
+
+.rowPair {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  position: static;
+  width: 328px;
+  height: 120px;
+  left: 0px;
+  top: 544px;
+  flex: none;
+  margin: 22px 16px;
+}
